@@ -1,3 +1,15 @@
+terraform {
+  backend "remote" {
+    hostname = "chs-drivera.scalr.io"
+    organization = "env-tjvod8lvt2ujvf8"
+
+    workspaces {
+      name = "t"
+    }
+  }
+}
+
+
 provider "aws" {
   region     = "us-west-2"
 }
